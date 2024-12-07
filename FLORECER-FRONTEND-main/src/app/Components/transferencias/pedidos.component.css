@@ -1,0 +1,142 @@
+
+body{
+
+    background-position:center;
+    background-size:cover;
+    min-height:88vh;
+}
+   
+.contenido{
+    width:100%;
+    height:75vh;
+    display:flex;
+    flex-direction:column;
+    padding: 20px;
+    margin-top: 20px;
+    margin-left: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+.container {
+    background-color: #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    width: 80%;
+    max-width: 600px;
+    padding: 20px;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+header h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #007bff;
+}
+
+.transfer-form {
+    background-color: #fafafa;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+input[type="text"], input[type="number"], textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+textarea {
+    resize: vertical;
+    height: 80px;
+}
+
+.usuario-container {
+    display: flex;
+    align-items: center;
+}
+
+.usuario-container input[type="text"] {
+    width: calc(100% - 30px); /* Ajusta el ancho para que el botón ocupe su espacio */
+}
+
+.btn-lupa {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    margin-left: 10px;
+}
+
+.btn-lupa img {
+    width: 20px;
+    height: 20px;
+}
+
+.monto-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.monto-container input[type="number"] {
+    width: 70%;
+}
+
+.readonly-input {
+    width: 28%;
+    background-color: #f0f0f0;
+    text-align: center;
+    border: 1px solid #ddd;
+    font-size: 16px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.btn-confirmar {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s;
+}
+
+.btn-confirmar:hover {
+    background-color: #0056b3;
+}

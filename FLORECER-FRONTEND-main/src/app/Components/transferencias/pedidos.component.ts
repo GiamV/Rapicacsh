@@ -4,6 +4,8 @@ import { DetalleVenta } from 'src/app/Models/DetalleVenta';
 import { CarritoComprasService } from 'src/app/Service/carrito-compras.service';
 import { LoginService } from 'src/app/Service/login.service';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { Usuario } from 'src/app/Models/Usuario';
+
 
 @Component({
   selector: 'app-pedidos',
@@ -11,26 +13,22 @@ import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
   styleUrls: ['./pedidos.component.css']
 })
 export class PedidosComponent implements OnInit {
-
+  public user:Usuario= new Usuario();
+  usuario: string = ''; // Variable para el input
   cabeceras:CabeceraVenta[]=[];
   detalles:DetalleVenta[]=[];
-  constructor(private modal:NgbModal, private carritoService:CarritoComprasService) { }
+  constructor(private modal:NgbModal, private carritoService:CarritoComprasService, private loginService:LoginService) { }
 
   ngOnInit(): void {
     let idUser=localStorage.getItem("iduser");
-    this.carritoService.listarCabUser(+idUser!).subscribe(
-      cabeceras=>{
-        this.cabeceras=cabeceras;
-        console.log(cabeceras);
-      }
-    );
+    
   }
 
-  VerDetalles(CabeceraVenta:CabeceraVenta){
-    this.carritoService.listarDetUser(CabeceraVenta.idCabecera).subscribe(
-      detalles=>{
-        this.detalles=detalles;
-        console.log(detalles);
+  buscarUsuario(){
+    this.loginService.getUserbyUaser(this.usuario).subscribe(
+      data=>{
+        this.user=data;
+        console.log(data);
       }
     );
   }

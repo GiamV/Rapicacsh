@@ -73,9 +73,6 @@ export class NavbarComponent implements OnInit {
     this.loginService.createUser(user)
     .subscribe(data=>{
       console.log(data.idUsuario)
-      this.carrito.addCabCarrito(data.idUsuario).subscribe(d=>{
-        console.log(d.idCabecera);
-      })
       swal.fire({
         icon: 'success',
         title: 'Bienvenido',

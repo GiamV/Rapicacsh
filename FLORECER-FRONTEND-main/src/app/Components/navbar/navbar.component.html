@@ -17,15 +17,13 @@
                 <a  *ngIf="loggedIn" href="/cliente">
                 <i class="fa-solid fa-user" ></i>
               </a>
-                <i *ngIf="loggedIn" (click)="logoutUser()" class="fa-solid fa-right-from-bracket"></i>
+                
                 <a *ngIf="!loggedIn" href="/login">
                   <i class="fa-solid fa-right-to-bracket "  style="color: #00ffff;"></i>
                 </a>
 
                 <i  data-toggle="modal" data-target="#exampleModal" *ngIf="!loggedIn" class="fa-solid fa-user-plus"></i>
-                <a href="/carrito-compras">
-                <i *ngIf="loggedIn" class="fa-solid fa-basket-shopping"></i>
-              </a>
+                <i *ngIf="loggedIn" (click)="logoutUser()" class="fa-solid fa-right-from-bracket"></i>
                 
               </div>
             </div>

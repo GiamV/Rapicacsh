@@ -20,36 +20,37 @@
         /* ********************************** \--> 
 
 
-          <section class="container container-features">
-            <div class="card-feature">
-              <i class="fa-solid fa-car"></i>
-              <div class="feature-content">
-                <span>Envío gratuito a nivel nacional</span>
-                <p>En pedido superior a S/.150</p>
-              </div>
+        <section class="container container-features">
+          <div class="card-feature">
+            <i class="fa-solid fa-lock"></i> <!-- Icono para seguridad -->
+            <div class="feature-content">
+              <span>Pagos rápidos y seguros</span>
+              <p>Realiza transacciones en segundos.</p>
             </div>
-            <div class="card-feature">
-              <i class="fa-solid fa-wallet"></i>
-              <div class="feature-content">
-                <span>Contrareembolso</span>
-                <p>100% garantía de devolución de dinero</p>
-              </div>
+          </div>
+          <div class="card-feature">
+            <i class="fa-solid fa-coins"></i> <!-- Icono para recompensas -->
+            <div class="feature-content">
+              <span>Recompensas exclusivas</span>
+              <p>Acumula puntos y obtén descuentos.</p>
             </div>
-            <div class="card-feature">
-              <i class="fa-solid fa-gift"></i>
-              <div class="feature-content">
-                <span>Tarjeta regalo especial</span>
-                <p>Ofrece bonos especiales con regalo</p>
-              </div>
+          </div>
+          <div class="card-feature">
+            <i class="fa-solid fa-plug"></i> <!-- Icono para integración -->
+            <div class="feature-content">
+              <span>Fácil integración</span>
+              <p>Usa tu billetera en miles de tiendas.</p>
             </div>
-            <div class="card-feature">
-              <i class="fa-solid fa-headset"></i>
-              <div class="feature-content">
-                <span>Servicio al cliente 24/7</span>
-                <p>LLámenos 24/7 al xxx-xxx-xxx</p>
-              </div>
+          </div>
+          <div class="card-feature">
+            <i class="fa-solid fa-headset"></i> <!-- Icono para servicio al cliente -->
+            <div class="feature-content">
+              <span>Servicio al cliente 24/7</span>
+              <p>Llámanos al xxx-xxx-xxx en cualquier momento.</p>
             </div>
-          </section>
+          </div>
+        </section>
+        
 
 
 
@@ -68,18 +69,18 @@
         /* ********************************** \--> 
 
         <section class="container top-categories">
-          <h1 class="heading-1">Mejores Categorías</h1>
+          <h1 class="heading-1">El dinero que necesitas, cuando lo necesitas.</h1>
           <div class="container-categories">
             <div class="card-category category-caballero">
-              <p>Caballeros</p>
+              <p>Inversion</p>
               <span>Ver más</span>
             </div>
             <div class="card-category category-dama">
-              <p>Damas</p>
+              <p>Crecimiento</p>
               <span>Ver más</span>
             </div>
             <div class="card-category category-niños">
-              <p>Niños</p>
+              <p>Ahorro</p>
               <span>Ver más</span>
             </div>
           </div>
@@ -91,23 +92,23 @@
 
         <section class="gallery">
           <img
-            src="../../../assets/images/galeria1.jpg"
+            src="https://tadvisorsgroup.com/wp-content/uploads/2024/04/asesoria-inversiones-seguridad-confianza.webp"
             alt="Gallery Img1"
             class="gallery-img-1"
           /><img
-            src="../../../assets/images/galeria2.jpg"
+            src="https://cdn.prod.website-files.com/6643a82fc46ca462b5ef9921/6644d444e15be59d46d71e49_65ea5ae100cd3685a49bdd2c_31-inversiones-inmobiliarias.webp"
             alt="Gallery Img2"
             class="gallery-img-2"
           /><img
-            src="../../../assets/images/galeria3.jpg"
+            src="https://elfinanciero.com.mx/resizer/v2/N5RSXI4E3BC2PIOEF25HVZWTOU.jpeg?smart=true&auth=1bf27fdb18337d21fba256cabea27e7d7be1443e6a1ed4a5c60d1346b49829c3&width=1600&height=900"
             alt="Gallery Img3"
             class="gallery-img-3"
           /><img
-            src="./../../../assets/images/galeria4.jpg"
+            src="https://th.bing.com/th/id/OIP.-IMop3IvOhGe-_cmTbtQ-wHaEK?rs=1&pid=ImgDetMain"
             alt="Gallery Img4"
             class="gallery-img-4"
           /><img
-            src="../../../assets/images/galeria5.jpg"
+            src="https://lepartisan.org/wp-content/uploads/2023/02/1267556.jpg"
             alt="Gallery Img5"
             class="gallery-img-5"
           />
@@ -130,37 +131,7 @@
 
 
 
-  <section class="container specials">
-    <h1 class="heading-1">Ofertas de temporada</h1>
 
-    <div class="container-items">
-      <!-- Producto 1 -->
-      <div (click)="ObtenerInfo(producto)" class="card-product" *ngFor="let producto of productos">
-                    <div class="container-img">
-                        <figure>
-                            <img src="{{producto.imagen}}" alt="producto" />
-                        </figure>
-                        <span class="discount">-13%</span>/////
-                    </div>-
-                    <div class="content-card-product">
-                        <div class="stars">
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-regular fa-star"></i>
-                        </div>
-                        <h2>{{producto.producto}}</h2>
-                        <span class="add-cart">
-                          <a (click)="ObtenerInfo(producto)"><i class="fa-solid fa-basket-shopping"></i></a>
-                            
-                        </span>
-                        <p class="price">S/{{producto.precio}}</p>
-                    </div>
-                </div>
-      
-    </div>
-  </section>
   
 </div>
 

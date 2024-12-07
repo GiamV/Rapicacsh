@@ -96,7 +96,7 @@ import { EditRolComponent } from './Components/Rol/edit-rol/edit-rol.component';
 import { ListarTdpComponent } from './Components/tipopago/listar-tdp/listar-tdp.component';
 import { AddTdpComponent } from './Components/tipopago/add-tdp/add-tdp.component';
 import { EditTdpComponent } from './Components/tipopago/edit-tdp/edit-tdp.component';
-import { PedidosComponent } from './Components/pedidos/pedidos.component';
+import { PedidosComponent } from './Components/transferencias/pedidos.component';
 import { ListarUserComponent } from './Components/Usuario/listar-user/listar-user.component';
 import { AddUserComponent } from './Components/Usuario/add-user/add-user.component';
 import { PedidosAdminComponent } from './Components/pedidos-admin/pedidos-admin.component';

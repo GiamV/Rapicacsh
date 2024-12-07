@@ -12,7 +12,9 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.utp.rapicash.entity.Tarjeta;
 import com.utp.rapicash.entity.Usuario;
+import com.utp.rapicash.service.ITarjetaService;
 import com.utp.rapicash.service.IUsuarioService;
 import com.utp.rapicash.serviceR.UsuarioServiceIm;
 
@@ -26,6 +28,9 @@ public class usuarioController {
 	
 	@Autowired
 	private UsuarioServiceIm userService;
+	
+	@Autowired
+	private ITarjetaService tarjetaService;
 
 	
 	//LISTAR USUARIOS
@@ -62,7 +67,15 @@ public class usuarioController {
 	//CREAR UN NUEVO USUARIO
 	@PostMapping("/usuarionew")
 	public Usuario usuarionew (@RequestBody Usuario usuario) {
+		usuario.setEstadoBancario(0);
+		
+		 // Asocia la tarjeta con el usuario
 		usuarioService.save(usuario);
+		Tarjeta tarjeta = userService.generarTarjeta();
+		tarjeta.setTipoTarjeta("Debito");
+        tarjeta.setUsuario(usuario);
+        tarjetaService.save(tarjeta);
+        
 		
 		return usuarioService.findById(usuario.getIdUsuario());
 	}
@@ -80,6 +93,7 @@ public class usuarioController {
 		usuarioActual.setTelefono(usuario.getTelefono());
 		usuarioActual.setDni(usuario.getDni());
 		usuarioActual.setEstado(usuario.getEstado());
+		usuarioActual.setEstadoBancario(usuario.getEstadoBancario());
 		usuarioService.save(usuarioActual);
 		return usuarioService.findById(id);
 	}

@@ -140,7 +140,7 @@
 
 .category-caballero {
 	background-image: linear-gradient(#00000080, #00000080),
-		url('../../../assets/images/caballeros-categoria.jpg');
+		url('../../../assets/images/bolsillo.jpg');
 	background-size: cover;
 	background-position: bottom;
 	background-repeat: no-repeat;
@@ -148,7 +148,7 @@
 
 .category-dama {
 	background-image: linear-gradient(#00000080, #00000080),
-		url('../../../assets/images/damas-categoria.jpg');
+		url('../../../assets/images/crecimiento.jpg');
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
@@ -156,7 +156,7 @@
 
 .category-niños {
 	background-image: linear-gradient(#00000080, #00000080),
-		url('../../../assets/images/niños-categoria.jpg');
+		url('../../../assets/images/inversion.jpg');
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;

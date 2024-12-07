@@ -1,8 +1,58 @@
 
   
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transferencias - Rapicash</title>
+
+</head>
+<body>
+    <div class="contenido">
+        <header>
+            <h1>Transferencias</h1>
+        </header>
+
+        <div class="transfer-form">
+          <form action="" method="post">
+            <div class="form-group">
+                <label for="usuario">Usuario destinatario:</label>
+                <div class="usuario-container">
+                    <input type="text" id="usuario" name="usuario"[(ngModel)]="usuario" 
+                    placeholder="Ingresa el nombre del destinatario"  required>
+                    <button (click)="buscarUsuario()" type="button" class="btn-lupa">
+                      <i class="fa-solid fa-magnifying-glass"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="monto">Monto a transferir:</label>
+                <div class="monto-container">
+                    <input type="number" id="monto" name="monto" placeholder="S/ 0.00" min="0" required>
+                    <input type="text" id="saldo" name="saldo" value="S/ 1000.00" readonly class="readonly-input">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="mensaje">Mensaje (Opcional):</label>
+                <textarea id="mensaje" name="mensaje" placeholder="Escribe un mensaje para el destinatario (opcional)"></textarea>
+            </div>
+
+            <div class="form-group">
+                <button type="submit" class="btn-confirmar">Confirmar Transferencia</button>
+            </div>
+        </form>
+        </div>
+
+        
+    </div>
+</body>
+</html>
 
 
-
+<!--
 
   <!DOCTYPE html>
   <html lang="es">
@@ -45,9 +95,9 @@
               
             </div>
           </div>
-          <!-- Button trigger modal -->
+           Button trigger modal 
           
-          <!-- Modal -->
+           Modal 
           <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered">
               <div class="modal-content">
@@ -127,3 +177,4 @@
       <script src="../../assets/js/bootsnav.js"></script>
   </body>
   </html>
+ -->
