@@ -1,0 +1,210 @@
+
+
+
+
+        
+
+
+        <header>
+          <div class="container-hero">
+            <div class="container hero">				
+              <div class="container-logo">
+                <i class="fa-solid fa-money-bill-wave"></i>
+                <h1 class="logo"><a href="/">Rapicash</a></h1>
+              </div>
+    
+              <div  class="container-user">
+                <a  *ngIf="loggedIn" href="/cliente">
+                <i class="fa-solid fa-user" ></i>
+              </a>
+                <i *ngIf="loggedIn" (click)="logoutUser()" class="fa-solid fa-right-from-bracket"></i>
+                <a *ngIf="!loggedIn" href="/login">
+                  <i class="fa-solid fa-right-to-bracket "  style="color: #00ffff;"></i>
+                </a>
+
+                <i  data-toggle="modal" data-target="#exampleModal" *ngIf="!loggedIn" class="fa-solid fa-user-plus"></i>
+                <a href="/carrito-compras">
+                <i *ngIf="loggedIn" class="fa-solid fa-basket-shopping"></i>
+              </a>
+                
+              </div>
+            </div>
+          </div>
+    
+          <div class="container-navbar">
+            <nav class="navbar container">
+              <i class="fa-solid fa-bars"></i>
+              <ul class="menu">
+                <li><a href="http://localhost:4200/index">Inicio</a></li>
+                <li><a href="/productcatalog?id=3">Servicios</a></li>
+                <li><a href="/productcatalog?id=2">Contactanos</a></li>
+                <li><a href="/productcatalog?id=1">Nosotros</a></li>
+                <li><a href="#">Más</a></li>
+              </ul>
+    
+              
+            </nav>
+          </div>
+        </header>
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Registro de Usuario</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      
+      <div class="modal-body">
+
+        <style>
+          .bg{
+          background-image:url(../../../../assets/images/register.png);
+          background-position: center center;
+          background-size: cover;
+          
+      }
+      </style> 
+      
+      <!-- <div class="container w-75 bg-white rounded shadow" >
+           -->
+           <div class="row align-items-stretch" >
+              
+            <div class="col  rounded-end">
+                <h2 class="fw-bold text-center py-6">Registrar Usuario</h2>
+        <form action="#">
+
+            <div class="row">
+              <div class="col-md-6">
+                <div class="mb-1 ">
+                  <label for="" class="form-label fw-bolder">Nombre</label><br>
+                  <input type="text" class="form-control" name="nombre" id="nombre" [(ngModel)]="usuario.nombre">
+                </div>
+              </div>
+              <div class="col-md-6 ml-auto">
+                <div class="mb-1">
+                  <label for="" class="form-label fw-bolder">Apellido</label><br>
+                  <input type="text" class="form-control" name="apellido" id="apellido" [(ngModel)]="usuario.apellido">
+              </div>
+              </div>
+              
+            </div>
+            <div class="mb-1">
+              <label for="" class="form-label fw-bolder">Usuario</label><br>
+              <input type="text" class="form-control" name="usuario" id="usuario" [(ngModel)]="usuario.usuario">
+            </div>
+            <div class="mb-1">
+              <label for="" class="form-label fw-bolder">Contraseña</label><br>
+              <input type="password" class="form-control" name="contrasena" id="contrasena" [(ngModel)]="usuario.contrasena">
+            </div>
+          
+          
+          
+        
+        <div class="mb-1">
+          <label for="" class="form-label fw-bolder">Genero</label><br>
+          <select name="sexo"  [(ngModel)]="usuario.sexo" class="form-control ps-2" aria-label="Default select example">
+              <option [ngValue]="undefined" selected>--Seleccione--</option>
+              <option [ngValue]="'Masculino'">Masculino</option>
+              <option [ngValue]="'Femenino'">Femenino</option>
+          </select>
+      </div>
+        <div class="mb-1">
+          <label for="" class="form-label fw-bolder">Direccion</label><br>
+          <input type="text" class="form-control" name="direccion" id="direccion" [(ngModel)]="usuario.direccion">
+        </div>
+
+        <div class="row">
+          <div class="col-md-6">
+            <div class="mb-1">
+              <label for="" class="form-label fw-bolder">Telefono</label><br>
+              <input type="number" class="form-control" name="telefono" id="telefono" [(ngModel)]="usuario.telefono">
+            </div>
+          </div>
+          <div class="col-md-6 ml-auto">
+            <div class="mb-1">
+              <label for="" class="form-label fw-bolder">Dni</label><br>
+              <input type="text" class="form-control" name="dni" id="dni" [(ngModel)]="usuario.dni">
+            </div>
+          </div>
+          
+        </div>
+
+          
+          
+          
+          
+          
+          
+      </form>
+    </div>
+    <div  class="col bg d-none d-lg-block col-md-5 col-lg-5 col-xl-6 rounded" >
+
+    </div>
+    
+</div>
+    <!-- 
+</div> -->
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+        <button (click)="Registrar(usuario)" type="button" data-dismiss="modal" class="btn btn-primary">Confirmar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

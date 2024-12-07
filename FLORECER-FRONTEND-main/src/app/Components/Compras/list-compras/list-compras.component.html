@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"content="width=device-width,initial-scale=1.0">
+    <title>Header de Bienvenida</title>
+</head>
+<body>
+    <div class="contenido">
+        
+      <div class="card border-primary mb-3">
+  
+          <div class="card-body text-primary text-center">
+            <h5 class="card-title">Listado de Pedidos</h5>
+            <div class="card-header"> Pedidos registrados</div>
+            <table class="table table-bordered table-striped">
+              <thead>
+                  <tr>
+                      <th>Id</th>
+                      <th>Total</th>
+                      <th>Usuario Cargo</th>
+                      <th>Fecha Pedido</th>
+                      <th>Estado</th>
+                      <th>Acciones</th>
+                  </tr>
+              </thead>
+              <tbody>
+                  <tr *ngFor="let guia of guiasEntrada">
+                      <td>{{guia.idGuiaEntrada}}</td>
+                      <td>S/{{guia.neto}}</td>
+                      <td>{{guia.usuario.nombre}} {{guia.usuario.apellido}}</td>
+                      <td>{{guia.fechamat}}</td>
+                      <td *ngIf="guia.estado==2">Pendiente</td>
+                      <td *ngIf="guia.estado==3">Aceptado</td>
+                      <td *ngIf="guia.estado==4">Rechazado</td>
+                      
+                      <td><button (click)="openCentrado(contenido,guia)" class="btn btn-success">Ver Detalles</button>
+                        <div *ngIf="guia.estado==2"  class="dropdown">
+                            <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                              Acciones
+                            </button>
+                            <ul class="dropdown-menu">
+                              <li><a style="cursor: pointer;" class="dropdown-item" (click)="AccionCompra(guia.idGuiaEntrada,3,guia)">Completado</a></li>
+                              <li><a style="cursor: pointer;" class="dropdown-item" (click)="AccionCompra(guia.idGuiaEntrada,4,guia)">Rechazado</a></li>
+                            </ul>
+                          </div>
+                          <div *ngIf="guia.estado==3 || guia.estado==4"  class="dropdown">
+                            <button disabled class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                              Acciones
+                            </button>
+                            <ul class="dropdown-menu">
+                              <li><button class="dropdown-item" (click)="AccionCompra(guia.idGuiaEntrada,3,guia)">Completado</button></li>
+                              <li><button class="dropdown-item" (click)="AccionCompra(guia.idGuiaEntrada,4,guia)">Rechazado</button></li>
+                            </ul>
+                          </div></td>
+                  </tr>
+                </tbody>
+            </table>
+            
+          </div>
+        </div>
+        <!-- Button trigger modal -->
+        
+        <!-- Modal -->
+        <ng-template #contenido let-modal>
+          <div class="modal-header">
+              <h4 class="modal-title">Productos</h4>
+              <button class="close" aria-label="close" type="button" (click)="modal.dismiss()">
+                  <span aria-hidden="true">&times;</span>
+              </button>
+          </div>
+          <div class="modal-body">
+            <table class="table table-bordered table-striped">
+                <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>Producto</th>
+                        <th>Cantidad</th>
+                        <th>Precio</th>
+                        <th>Proveedor</th>
+                        <th>Imagen</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let deta of detalleguia">
+                        <td>{{deta.idDetalleGuia}}</td>
+                        <td>{{deta.producto.producto}}</td>
+                        <td>{{deta.cantidad}}</td>
+                        <td>S/{{deta.precio}}</td>
+                        <td>{{deta.proveedor.nombreComercial}}</td>
+                        <td class="text-center"><img style="height: 50px;" src="{{deta.producto.imagen}}"></td>
+                    </tr>
+                  </tbody>
+              </table>
+          </div>
+          <div class="modal-footer">
+              <button type="button" class="btn btn-success"(click)="modal.close()" >Cerrar</button>
+          </div>
+      </ng-template>
+        
+        
+    
+    </div>
+    <script src="../../assets/js/bootsnav.js"></script>
+</body>
+</html>

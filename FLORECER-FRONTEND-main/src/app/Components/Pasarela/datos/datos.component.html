@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Complete your purchase</title>
+</head>
+<body>
+   <br>
+    <header>
+        
+        <h1 class="logo">PASARELA</h1>
+        <ul class="menu-container">
+        </ul>
+
+    </header>
+    <div class="progress-checkout-container">
+        <div class="progress-step-container">
+            <div class="step-check"></div>
+            <span class="step-title">Datos del Cliente</span>
+        </div>
+        <div class="progress-step-container">
+            <div class="step-check"></div>
+            <span class="step-title">Datos de Envio</span>
+        </div>
+
+        <div class="progress-step-container">
+            <div class="step-check"></div>
+            <span class="step-title">Pagar</span>
+        </div>
+        
+
+
+    </div>
+    <div class="container">
+        <div class="row">
+    <div class="col-lg-9">
+    <div class="form-container">
+        <h2 class="form-title">Datos del Cliente</h2>
+        <form action="" class="checkout-form">
+            <div class="input-line">
+                <label for="name">Nombre Completo</label>
+                <input readonly type="text" name="name" id="name" value="{{user.nombre}} {{user.apellido}}">
+            </div>
+            
+            <div class="input-container">
+                <div class="input-line">
+                    <label for="name">Telefono</label>
+                    <input readonly type="text" name="telefono" id="telefono" value="{{user.telefono}}">
+                </div>
+                <div class="input-line">
+                    <label for="name">DNI</label>
+                    <input readonly type="text" name="dni" id="dni" value="{{user.dni}}">
+                </div>
+            </div>
+            <div class="input-line">
+                <label for="name">Observaciones</label>
+                <input  type="text"  >
+            </div>
+            <input (click)="irEnvio()" type="button" value="Continuar y Confirmar">
+        </form>
+    </div>
+</div>
+        <div class="col-lg-3">
+            
+            <div class="card position-sticky top-0" style="margin:10px">
+                <div class="p-3 bg-light bg-opacity-10">
+                  <h6 class="card-title mb-3">Order Summary</h6>
+                  <div class="d-flex justify-content-between mb-1 small">
+                    <span>Subtotal</span> <span>S/{{monto}}</span>
+                  </div>
+                  <hr>
+                  <div class="d-flex justify-content-between mb-4 small">
+                    <span>TOTAL</span> <strong class="text-dark">S/{{monto}}</strong>
+                  </div>
+                  <div class="text-center d-flex justify-content-between mb-4 small">
+                    
+                  </div>
+                </div>
+              </div>
+            </div>
+    
+</div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,25 @@
+package com.utp.rapicash.serviceR;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.utp.rapicash.entity.CabeceraVenta;
+import com.utp.rapicash.entity.VentasPorMesCant;
+import com.utp.rapicash.entity.VentasPorMesDTO;
+import com.utp.rapicash.repository.IDetalleRepository;
+import com.utp.rapicash.repository.VentasPorMesRepository;
+
+@Service
+public class VentasPorMesServiceIm {
+	@Autowired
+	VentasPorMesRepository VentasRepo;
+	
+	public List<VentasPorMesDTO> DashboardVentasDinero() {
+		return (List<VentasPorMesDTO>) VentasRepo.obtenerTotalPorMes();
+	}
+	
+	
+
+}

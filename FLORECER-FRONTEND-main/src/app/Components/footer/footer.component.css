@@ -1,0 +1,105 @@
+/* ********************************** */
+/*               FOOTER               */
+/* ********************************** */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    font-family: sans-serif;
+}
+
+.container {
+    width: auto;
+    margin: 0 auto;
+}
+
+.footer {
+    background-color: #24262B;
+    padding: 80px 0;
+}
+
+.footer-row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.company-description {
+    font-size: 16px;
+    color: #BBBBBB;
+    margin-top: 10px;
+    line-height: 1.6;
+}
+
+.footer-links {
+    flex: 1; /* Permite que cada columna use espacio proporcional */
+    padding: 0 15px;
+}
+
+.footer-links h4 {
+    font-size: 20px;
+    color: #fff;
+    margin-bottom: 15px; /* Ajustado para mayor separación */
+    font-weight: 500;
+    border-bottom: 2px solid #A449BD;
+    padding-bottom: 10px;
+    display: inline-block;
+}
+
+.footer-links ul li a {
+    font-size: 18px;
+    text-decoration: none;
+    color: #BBBBBB;
+    display: block;
+    margin-bottom: 15px;
+    transition: all .3s ease;
+}
+
+.footer-links ul li a:hover {
+    color: #FFFFFF;
+    padding-left: 6px;
+}
+
+.social-link a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 40px;
+    width: 40px;
+    height: 40px;
+    background-color: rgba(255, 255, 255, 0.2);
+    margin: 0 10px 10px 0;
+    border-radius: 50%;
+    color: #FFFFFF;
+    transition: all .5s ease;
+    line-height: 40px;
+}
+
+.social-link a:hover{
+    background-color: #A449BD;
+}
+
+@media(max-width: 1140px) {
+    .footer-row {
+        text-align: center;
+    }
+    .footer-links {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    .company-description {
+        margin: 0 auto; /* Centra el texto automáticamente */
+        max-width: 80%; /* Ajusta el ancho máximo en pantallas pequeñas */
+    }
+}
+@media(max-width: 675px) {
+    .company-description {
+        max-width: 90%;
+        text-align: center;
+    }
+}

@@ -1,0 +1,43 @@
+<div class="container-fluid">
+  <div class="row">
+    <!-- Columna izquierda donde está el listado de productos -->
+    <div class="col-md-8">
+      <h3>Listado de Productos</h3>
+      <div class="info">
+        <p>This demonstrates a simple single selection table.</p>
+      </div>
+      <ngx-datatable
+        class="material"
+        [rows]="productos"
+        [columnMode]="ColumnMode.force"
+        [columns]="columns"
+        [headerHeight]="50"
+        [footerHeight]="50"
+        rowHeight="auto"
+        [limit]="10"
+        [selected]="productoss"
+        [selectionType]="SelectionType.single"
+        (activate)="onActivate($event)"
+        (select)="onSelect($event)"
+      >
+      </ngx-datatable>
+    </div>
+
+    <!-- Columna derecha donde se muestra la información del producto seleccionado -->
+    <div class="col-md-4 selected-column">
+      <h4>Producto Seleccionado</h4>
+      <ul *ngFor="let sel of productoss">
+        <li><b>Producto:</b> {{ sel.producto }}</li>
+        <li><b>Categoría:</b> {{ sel.categoria.categoria }}</li>
+        <li><b>Descripción:</b> {{ sel.descripcion }}</li>
+        <li><img style="height: 200px;" src="{{ sel.imagen }}"></li>
+        <li><b>Estado:</b> {{ sel.estado === 1 ? 'Activo' : 'Inactivo' }}</li>
+        <li>
+          <button (click)="Editar(sel)" class="btn btn-success"><i class="fa-solid fa-pen-to-square"></i> Editar</button>
+          <button *ngIf="sel.estado === 1" (click)="Delete(sel)" class="btn btn-danger" style="margin-left: 10px;">Desactivar</button>
+          <button *ngIf="sel.estado === 0" (click)="Delete(sel)" class="btn btn-warning" style="margin-left: 10px;">Activar</button>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

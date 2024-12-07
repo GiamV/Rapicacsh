@@ -1,0 +1,7 @@
+.prueba{
+    display: inline;
+}
+.display-area{
+    width: calc(100% - 450px);
+    transition:left 250ms ease-in, width 250ms ease-in;
+}

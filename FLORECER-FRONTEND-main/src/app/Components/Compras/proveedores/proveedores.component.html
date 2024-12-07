@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" >
+  <head>
+    <title>Carrito de compra</title>
+    <script type="text/javascript" src="https:/kit.fontawesome.com/a076d05399.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&family=Roboto:wght@300&display=swap" rel="stylesheet">
+	
+  </head>
+  <body>
+	<a (click)="irManProvee()"  class="btn btn-primary">Mantenimiento Proveedor</a>
+	<mat-paginator [length]="proveedores.length"
+               [pageSize]="page_size"
+               [pageSizeOptions]="pageSizeOptions"
+               (page)="handlePage($event)"
+               aria-label="Select page">
+</mat-paginator>
+	<div class="mayor">
+		<div class="contenedor">
+		
+			<div *ngFor="let  proveedor of proveedores | paginate:page_size:page_number" class="carta"  >
+				<div class="carta-encabezado">
+					<img style="width: 200px;" src="{{proveedor.imagen}}">
+				</div>
+				<div class="carta-iconos">
+					<li class="agrandara"><a><span class="fa-solid fa-phone"></span></a></li>
+					<li class="agrandara"><a><span class="fa-solid fa-envelope"></span></a></li>
+					<li class="agrandara"><a><span class="fa-solid fa-registered"></span></a></li>
+				</div>
+				<div class="carta-contenido">
+					<div class="info-personal desplazar">{{proveedor.nombreComercial}}</div>
+					<div class="info-personal desplazar">{{proveedor.descripcion}}</div>
+					<div class="info-personal desplazar text-white">
+						<p></p>
+					</div>
+				</div>
+				<div class="carta-acciones">
+					<a style="text-decoration: none;" [routerLink]="['/cliente/cliente-procom', proveedor.idProveedor]" class="botones agrandar">
+						<span class="fas fa-envelope"></span>
+						Comprar
+					</a>
+				</div>
+				
+			</div>
+		</div>
+	</div>
+	
+	
+		
+	
+  </body>
+</html>

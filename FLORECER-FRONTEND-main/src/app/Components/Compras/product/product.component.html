@@ -1,0 +1,25 @@
+<div class="container">
+  <a (click)="irCarritoGuia()" style="cursor: pointer;">
+  <img _ngcontent-bca-c93="" src="https://icones.pro/wp-content/uploads/2021/05/icone-de-panier-noir.png" alt="" style="max-width: 26px;">
+</a>
+    <div class="container-items">
+    <div class="item" *ngFor=" let deta of productos">
+      <figure>
+        <img
+          src="{{deta.producto.imagen}}"
+          alt="producto"
+        />
+      </figure>
+      <div class="info-product">
+        <h2>{{deta.producto.producto}}</h2>
+        <p class="price">S/{{(deta.producto.precioCompra+0.00)}}</p>
+        
+        <input id="producto" name="producto" type="hidden" value={{producto}} [(ngModel)]="detalle.producto">
+        <input id="precio" name="precio" type="hidden" value="{{producto.precioCompra}}" [(ngModel)]="detalle.precio">
+        <input id="guiaEntrada" name="guiaEntrada" type="hidden" value="{{guia}}" [(ngModel)]="detalle.guia_Entrada">
+
+        <button (click)="AgregarAlaCompra(detalle,deta.producto)" >Agregar</button>
+      </div>
+    </div>
+    </div>
+    </div>

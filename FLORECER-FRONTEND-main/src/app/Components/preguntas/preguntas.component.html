@@ -1,0 +1,15 @@
+
+    <header>
+        <h1>Preguntas Frecuentes</h1>
+        <p>Encuentra respuestas a las dudas más comunes sobre nuestra tienda de ropa.</p>
+    </header>
+
+    <section class="faq-container" style="margin-bottom: 20px;">
+        <div class="faq-item" *ngFor="let pregunta of preguntas">
+            <div class="faq-icon">?</div>
+            <button class="faq-question" (click)="toggleAnswer($event)">{{ pregunta.texto }}</button>
+            <p class="faq-answer">{{ pregunta.respuesta }}</p>
+        </div>
+        
+    </section>
+

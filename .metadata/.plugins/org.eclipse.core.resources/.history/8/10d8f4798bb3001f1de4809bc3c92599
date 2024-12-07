@@ -1,0 +1,20 @@
+package com.idat.florecer.repository;
+
+import java.util.List;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.repository.query.Param;
+
+import com.utp.rapicash.entity.CabeceraVenta;
+import com.utp.rapicash.entity.VentasPorMesCant;
+import com.utp.rapicash.entity.VentasPorMesDTO;
+
+public interface VentasPorMesRepository extends JpaRepository<VentasPorMesDTO, String> {
+	
+	@Query(value= "{call obtenerTotalPorMes()}",nativeQuery=true)
+	List<VentasPorMesDTO> obtenerTotalPorMes();
+	
+	
+
+}

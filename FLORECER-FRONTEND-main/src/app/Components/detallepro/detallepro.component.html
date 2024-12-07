@@ -1,0 +1,57 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Page</title>
+</head>
+<body>
+
+    <div class="product-media-container" style="position: relative; top: 30px;">
+        <div class="big-image-wrapper">
+            <img src="{{producto.imagen}}" alt="" class="product-image">
+        </div>
+        
+    </div>
+
+    <div class="product-info-container">
+        <div class="product-info">
+            <span class="seller">{{producto.categoria.categoria}}</span>
+            <h3 class="product-title">{{producto.producto}}</h3>
+            <span class="price">S/{{producto.precio}}.00</span>
+        </div>
+        <span class="size-title">Size</span>
+        <div class="product-size-container">
+            <input type="radio" name="size" id="40">
+            <label for="40" class="product-size">S</label>
+            <input type="radio" name="size" id="41">
+            <label for="41" class="product-size">M</label>
+            <input type="radio" name="size" id="42">
+            <label for="42" class="product-size">L</label>
+            <input type="radio" name="size" id="43">
+            <label for="43" class="product-size">XL</label>
+            <input type="radio" name="size" id="44">
+
+        </div>
+        <input id="producto" name="producto" type="hidden" value={{producto}} [(ngModel)]="detalle.producto">
+        <input id="precio" name="precio" type="hidden" value="{{producto.precio}}" [(ngModel)]="detalle.precio">
+        <input id="cabecera" name="cabecera" type="hidden" value="{{cabecera}}" [(ngModel)]="detalle.cabecera">
+        Cantidad
+        <input class="form-control" name="cantidad" [(ngModel)]="detalle.cantidad" type="number" value="1">
+        <div class="row">
+          <div class="col-md-12 text-center">
+            <label>{{this.mensaje}}</label>
+          </div>
+        </div>
+        <button (click)="AgregarAlCarrito(detalle)"  class="button">Add to cart</button>
+
+        <span class="collapsible">Description</span>
+        <p>{{producto.descripcion}}</p>
+        
+
+    </div>
+    
+</body>
+</html>

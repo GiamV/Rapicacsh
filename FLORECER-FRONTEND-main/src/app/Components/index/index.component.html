@@ -1,0 +1,168 @@
+<div class="  ">
+
+ 
+
+  <!--********************************** */
+        /*             BANNER                  */
+        /* ********************************** \--> 
+
+        <section class="banner">
+          <div class="content-banner">
+            <p>Tu mejor opción financiera</p>
+            <h2 style="font-family: Bangers; color: rgba(255, 255, 255, 0.953);">Tu dinero,<br />siempre a la mano.</h2>
+            <a href="#">Conviértete en un "RAPI CASH" ahora</a>
+          </div>
+        </section>
+
+
+<!--********************************** */
+        /*             FEATURES                */
+        /* ********************************** \--> 
+
+
+          <section class="container container-features">
+            <div class="card-feature">
+              <i class="fa-solid fa-car"></i>
+              <div class="feature-content">
+                <span>Envío gratuito a nivel nacional</span>
+                <p>En pedido superior a S/.150</p>
+              </div>
+            </div>
+            <div class="card-feature">
+              <i class="fa-solid fa-wallet"></i>
+              <div class="feature-content">
+                <span>Contrareembolso</span>
+                <p>100% garantía de devolución de dinero</p>
+              </div>
+            </div>
+            <div class="card-feature">
+              <i class="fa-solid fa-gift"></i>
+              <div class="feature-content">
+                <span>Tarjeta regalo especial</span>
+                <p>Ofrece bonos especiales con regalo</p>
+              </div>
+            </div>
+            <div class="card-feature">
+              <i class="fa-solid fa-headset"></i>
+              <div class="feature-content">
+                <span>Servicio al cliente 24/7</span>
+                <p>LLámenos 24/7 al xxx-xxx-xxx</p>
+              </div>
+            </div>
+          </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+   <!--********************************** */
+        /*             CATEGORIAS               */
+        /* ********************************** \--> 
+
+        <section class="container top-categories">
+          <h1 class="heading-1">Mejores Categorías</h1>
+          <div class="container-categories">
+            <div class="card-category category-caballero">
+              <p>Caballeros</p>
+              <span>Ver más</span>
+            </div>
+            <div class="card-category category-dama">
+              <p>Damas</p>
+              <span>Ver más</span>
+            </div>
+            <div class="card-category category-niños">
+              <p>Niños</p>
+              <span>Ver más</span>
+            </div>
+          </div>
+        </section>
+
+<!--********************************** */
+        /*             GALERIA               */
+        /* ********************************** \--> 
+
+        <section class="gallery">
+          <img
+            src="../../../assets/images/galeria1.jpg"
+            alt="Gallery Img1"
+            class="gallery-img-1"
+          /><img
+            src="../../../assets/images/galeria2.jpg"
+            alt="Gallery Img2"
+            class="gallery-img-2"
+          /><img
+            src="../../../assets/images/galeria3.jpg"
+            alt="Gallery Img3"
+            class="gallery-img-3"
+          /><img
+            src="./../../../assets/images/galeria4.jpg"
+            alt="Gallery Img4"
+            class="gallery-img-4"
+          /><img
+            src="../../../assets/images/galeria5.jpg"
+            alt="Gallery Img5"
+            class="gallery-img-5"
+          />
+        </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <section class="container specials">
+    <h1 class="heading-1">Ofertas de temporada</h1>
+
+    <div class="container-items">
+      <!-- Producto 1 -->
+      <div (click)="ObtenerInfo(producto)" class="card-product" *ngFor="let producto of productos">
+                    <div class="container-img">
+                        <figure>
+                            <img src="{{producto.imagen}}" alt="producto" />
+                        </figure>
+                        <span class="discount">-13%</span>/////
+                    </div>-
+                    <div class="content-card-product">
+                        <div class="stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                        </div>
+                        <h2>{{producto.producto}}</h2>
+                        <span class="add-cart">
+                          <a (click)="ObtenerInfo(producto)"><i class="fa-solid fa-basket-shopping"></i></a>
+                            
+                        </span>
+                        <p class="price">S/{{producto.precio}}</p>
+                    </div>
+                </div>
+      
+    </div>
+  </section>
+  
+</div>
+
+
+

@@ -1,0 +1,120 @@
+/* =======================
+   TITULO
+========================= */
+.titulo {
+    background: #9f399c;
+    color: rgb(255, 255, 255);
+    padding: 20px;
+    border-radius: 15px; /* Bordes redondeados */
+    font-family: Arial, sans-serif; /* Fuente para un estilo limpio */
+}
+
+/* =======================
+   LISTADO DE PRODUCTOS
+========================= */
+.listado {
+    color: white;
+    overflow-y: scroll;
+    max-width: 90%;
+}
+
+/* =======================
+   TABLA DEL CARRITO
+========================= */
+.table {
+    margin: 0;
+}
+
+.cabecera-tabla {
+    background: #9f399c;
+    color: white;
+}
+
+.the {
+    border: 0;
+}
+
+tr:nth-child(even) {
+    background-color: white;
+}
+
+tr:nth-child(odd) {
+    background-color: gainsboro;
+}
+
+/* =======================
+   BOLETA (RESUMEN DE COMPRA)
+========================= */
+.boleta {
+    background: #f8e8f8;
+    color: black;
+    padding: 20px;
+    border-radius: 15px; /* Bordes redondeados */
+    font-family: Arial, sans-serif; /* Fuente para un estilo limpio */
+}
+
+.titulo-resumen {
+    text-align: left;
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #000000;
+}
+
+.detalles-resumen p {
+    display: flex;
+    justify-content: space-between;
+    color: #000000;
+    font-size: 16px;
+    padding: 5px 0;
+    border-bottom: 1px solid #d3d3d3; /* Línea separadora */
+}
+
+.btn-comprar {
+    background-color: #9f399c;
+    color: #fff;
+    border: none;
+    padding: 12px 0;
+    margin-top: 20px;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    width: 100%; /* Ocupa todo el ancho */
+}
+
+.back-link {
+    display: block;
+    margin-top: 15px;
+    color: #000000;
+    text-decoration: underline; /* Subrayado */
+    font-weight: bold;
+    font-size: 14px;
+}
+
+
+/* =======================
+   CONTADOR DE PRODUCTOS
+========================= */
+.count-products {
+    z-index: 1;
+    position: absolute;
+    top: 50px;
+    right: 440px;
+    background-color: #000;
+    color: #fff;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+
+.carrito-icono {
+    width: 200px; /* Ajusta el tamaño aquí */
+    height: 200px; /* Ajusta el tamaño aquí */
+    fill: #000000; /* Color del icono */
+}
+
+#contador-productos {
+    font-size: 24px;
+}

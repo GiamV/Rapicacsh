@@ -1,0 +1,62 @@
+<style>
+    .bg{
+    background-image:url(../../../../assets/images/proveedor.png);
+    background-position: center center;
+    background-size: cover;
+    
+}
+</style>
+
+<div class="container w-75 bg-white  rounded shadow" >
+    <div class="row align-items-stretch" >
+        
+        <div class="col p-5 rounded-end">
+            
+            
+            <h2 class="fw-bold text-center py-6">Registrar Proveedor</h2>
+            <br>
+           
+
+            <form action="#">
+                
+                <div class="mb-1">
+                    <label for="" class="form-label fw-bolder">Nombre Comercial</label><br>
+                    <input type="text" class="form-control" name="nombreComercial" id="nombreComercial" [(ngModel)]="proveedor.nombreComercial">
+                </div>
+                <div class="mb-1">
+                    <label for="" class="form-label fw-bolder">Rup</label><br>
+                    <input type="number" class="form-control" name="rup" id="rup" [(ngModel)]="proveedor.rup">
+                </div>
+                <div class="mb-1">
+                    <label for="" class="form-label fw-bolder">Telefono</label><br>
+                    <input type="text" class="form-control" name="telefono" id="telefono" [(ngModel)]="proveedor.telefono">
+                </div>
+                <div class="mb-1">
+                    <label for="" class="form-label fw-bolder">Correo</label><br>
+                    <input type="text" class="form-control" name="descripcion" id="descripción" [(ngModel)]="proveedor.correo">
+                </div>
+                <div class="mb-1">
+                    <label for="" class="form-label fw-bolder">Descripcion</label><br>
+                    <input type="text" class="form-control" name="descripcion" id="descripción" [(ngModel)]="proveedor.descripcion">
+                </div>
+
+                <div class="mb-1">
+                    <label for="" class="form-label fw-bolder">Imagen</label><br>
+                    <input type="text" class="form-control" name="imagen" id="imagen" [(ngModel)]="proveedor.imagen">
+                </div>
+                
+                
+                <div class="d-grid  ">
+                    <button (click)="GuardarProveedor(proveedor)" type="submit" class="btn btn-primary fw-bold text-light">Registrar</button>
+                </div>
+                
+                
+            </form>
+            
+            
+            
+        </div>
+        <div  class="col bg d-none d-lg-block col-md-5 col-lg-5 col-xl-6 rounded" >
+        </div>
+
+        

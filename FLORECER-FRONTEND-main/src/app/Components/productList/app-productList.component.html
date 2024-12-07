@@ -1,0 +1,75 @@
+
+
+<!-- <br>
+<br>
+<br>
+<br>
+<section class="cpnazo__home__grid">
+    <div class="container g-py-30">
+      <h2 class="cpnazo__sub-title">¡Encuentra lo mejor en {{cat}}!</h2>
+      <div class="cpnazo__layaut-grid">
+        <a href="#" (click)="ObtenerInfo(producto)" class="cpnazo__layaut-grid__item" *ngFor=" let producto of productos">
+          <div class="image">
+            <img
+              class="cpnazo__img"
+              src="{{producto.imagen}}"
+              alt="MATILA"
+            />
+          </div>
+          <div class="info">
+            <h3 class="title2">{{producto.producto}}</h3>
+            <p class="excert">
+              El gran sabor logrado por nuestra receta secreta<br>
+              <span class="title3">S/{{producto.precio}}.00</span>
+            </p>
+            <div class="cpnazo__btn">Ver</div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+
+  <div class="container">
+
+<div class="container-items">
+<div class="item" *ngFor=" let producto of productos">
+  <figure>
+    <img
+      src="{{producto.imagen}}"
+      alt="producto"
+    />
+  </figure>
+  <div class="info-product">
+    <h2>{{producto.producto}}</h2>
+    <p class="price">S/{{producto.precio}}.00</p>
+    <button (click)="ObtenerInfo(producto)">Ver Producto</button>
+  </div>
+</div>
+
+</div>
+</div>
+ -->
+
+ <section class="container-catalogo-shop">
+  <!--Producto N2-->
+  <article class="deporte-item-shop" *ngFor=" let producto of productos" >
+      <div class="card product-item">
+          <div class="card-header product-img">
+              <img class="img-fluid" src="{{producto.imagen}}" alt="">
+          </div>
+          <div class="card-body text-center">
+              <h6>{{producto.producto}}</h6>
+              <div class="d-flex justify-content-center">
+                  <h6>S/{{producto.precio}}</h6>
+                  <h6 class="text-muted ml-2"><del>S/{{producto.precio+30}}</del></h6>
+              </div>
+          </div>
+          <div class="card-footer d-flex justify-content-between">
+              <a (click)="ObtenerInfo(producto)" class="btn btn-sm text-dark p-0"><i class="bi bi-eye text-primary mr-2"></i>Ver Detalle</a>
+              <a href="#" class="btn btn-sm text-dark p-0"><i class="bi bi-cart text-primary mr-2"></i>Añadir al Carrito</a>
+          </div>
+      </div>
+  </article>
+</section>
+<br>
